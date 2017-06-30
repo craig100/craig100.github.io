@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="1 動機：組合級數  在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子： \begin{equation}    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k} \end{equation}  也就是要算 \begin{equation}    \binom{0}{0} \bi">
+<meta name="description" content="動機：組合級數  這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子： \begin{equation}    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k} \end{equation}  也就是要算 \b">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一些組合級數與生成函數">
 <meta property="og:url" content="http://craig100.github.io/2017/06/22/一些組合級數與生成函數/index.html">
 <meta property="og:site_name" content="幽默數社">
-<meta property="og:description" content="1 動機：組合級數  在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子： \begin{equation}    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k} \end{equation}  也就是要算 \begin{equation}    \binom{0}{0} \bi">
-<meta property="og:updated_time" content="2017-06-30T16:08:33.000Z">
+<meta property="og:description" content="動機：組合級數  這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子： \begin{equation}    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k} \end{equation}  也就是要算 \b">
+<meta property="og:updated_time" content="2017-06-30T18:21:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些組合級數與生成函數">
-<meta name="twitter:description" content="1 動機：組合級數  在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子： \begin{equation}    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k} \end{equation}  也就是要算 \begin{equation}    \binom{0}{0} \bi">
+<meta name="twitter:description" content="動機：組合級數  這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子： \begin{equation}    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k} \end{equation}  也就是要算 \b">
 
 
 
@@ -319,7 +319,38 @@
       
 
       
-        <h2 id="1-動機：組合級數"><a href="#1-動機：組合級數" class="headerlink" title="1 動機：組合級數"></a>1 動機：組合級數</h2><p>  在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子：<br> \begin{equation}<br>    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k}<br> \end{equation}<br>  也就是要算<br> \begin{equation}<br>    \binom{0}{0} \binom{2n}{n}+ \binom{2}{1}\binom{2n-2}{n-1} +\binom{4}{2}\binom{2n-4}{n-2} + \dots +\binom{2n}{n} \binom{0}{0}<br> \end{equation}<br>  並且因爲一些猜測，我們相信上式的值要是 $4^n$ ，但這個結果並不顯然，於是我們引進生成函數的概念。</p>
+        <h2 id="動機：組合級數"><a href="#動機：組合級數" class="headerlink" title="動機：組合級數"></a>動機：組合級數</h2><p>  這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子：<br> \begin{equation}<br>    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k}<br> \end{equation}<br>  也就是要算<br> \begin{equation}<br>    \binom{0}{0} \binom{2n}{n}+ \binom{2}{1}\binom{2n-2}{n-1} +\binom{4}{2}\binom{2n-4}{n-2} + \dots +\binom{2n}{n} \binom{0}{0} \tag {1.1}<br> \end{equation}<br>  並且因爲一些猜測，我們相信上式的值要是 $4^n$ ，但這個結果並不顯然，於是我們引進生成函數的概念。</p>
+<a id="more"></a>
+<h2 id="生成函數"><a href="#生成函數" class="headerlink" title="生成函數"></a>生成函數</h2><p> 首先，生成函數是這樣定義的：</p>
+<div style="border-width:3px;border-style:solid;padding:5px;"><br> 生成函數 (generating function)<br> 給定一個數列 ${a<em>k}^{\infty}</em>{k=0}$ ，則函數<br> \begin{equation}<br>  f(x)=\sum^{\infty}_{k=0}a_kx^k=a_0+a_1x+ \dots + a_nx^n + \dots<br> \end{equation}<br>稱為數列此數列之 ( 普通 ) 生成函數 (ordinary generating function) 或組合生成函數 (generating function for combination)。<br></div>
+
+
+<p>現在我們可以做一些簡單的觀察，例如，考慮<br>\begin{equation}<br>(1+ax)(1+bx)(1+cx)=1+(a+b+c)x+(ab+bc+ac)x^2+abcx^3 \tag{2.1}<br>\end{equation}<br>這個乘法的結構很單純，右式的一次方、二次方與三次方項係數，分別是 $a,b,c$ 的基本對稱多項式 (symmetry polynomial) 。當然，這個式子有組合的意義：我們將 $a,b,c$ 看成三個物品，而常數項 $1$ 表示在三物品中一個都不取， $x$ 的一次方係數 $a+b+c$ 表示在 $a,b,c$ 中取一個的所有組合，即取 $a$ 、取 $b$ 或取 $c$，而 $x$ 的二次方係數 $ab+bc+ac$ 表示取二個的各種組合，最後， $x$ 的三次方係數表示了三個皆取的唯一方法。在這裡可能產生各種情形是用 $+$ 號連接，代表加法原理，同時發生之事件則用 $\cdot$ 號，代表乘法原理。</p>
+<p>所以回到式 (2) 的問題，我們可以定義一個數列<br>\begin{equation}<br>\left{ \binom{2k}{k} \right} ^{\infty}_{k=0}<br>\end{equation}<br>並以此構造其生成函數：<br>\begin{equation}<br>F(x)=\binom{0}{0} + \binom{2}{1}x +\binom{4}{2}x^2 + \dots +\binom{2n}{n}x^n+\dots<br>\end{equation}<br>巧妙地，我們可以透過 $(2.1)$ 式的觀察，發現我們在 $(1.1)$ 式所求，即為 $F^2(x)$ 的 $n$ 次方係數。所以，現在的問題是， $F(x)$ 的確切型式 (exact form) 是什麼？</p>
+<p>以下，我們先定義廣義的組合數：</p>
+<blockquote>
+<p><strong>廣義組合數 (generalized binomial number)</strong><br> 若 $\alpha$ 為任意實數，則我們可定義廣義組合數為：<br> \begin{equation}<br>   \binom{\alpha}{k}=\dfrac{\alpha (\alpha -1) \dots (\alpha -(k-1))}{k!}<br> \end{equation}</p>
+</blockquote>
+<p>很自然地，因為 $\alpha$ 為任意實數，所以二項式定理可以被推廣為<br>$$ (x+y)^{\alpha} = \sum^{\infty}_{k=0} \binom{\alpha}{k} x^{\alpha -k}y^k $$<br>此式即為牛頓廣義二項式定理 (Newton’s generalized binomial theorem) 。</p>
+<p>現在我們利用此定義，非常技巧性的求出 $F(x)$ 。<br> <br><br>考慮<br>\begin{equation}<br>(1+x)^{\frac{-1}{2}}=\sum<em>{k=0}^{\infty} \binom{\frac{-1}{2}}{k}x^k = \sum</em>{k\geq 0} \binom{\frac{-1}{2}}{k}x^k \tag{2.2}<br>\end{equation}<br>其中<br>\begin{eqnarray}<br>\binom{\frac{-1}{2}}{k} &amp;=&amp; \dfrac{  \frac{-1}{2} \cdot \frac{-3}{2} \dots \cdot \frac{-(2k-1)}{2} }{ k! } \<br>&amp;=&amp; \frac{ (-1)^k 1\cdot 3\cdot 5 \dots \cdot (2k-1) }{2^kk^!} \tag{2.3} \<br>&amp;=&amp; \dfrac{ (-1)^k (2k)! }{ 2^k k! 2^k k! } = \frac{(-1)^k}{4^k}\binom{2k}{k}<br>\end{eqnarray}<br>所以，合併 $(2.2)$ $(2.3)$ 式後可得：<br>\begin{equation}<br>(1+x)^{\frac{-1}{2}}=\sum<em>{k \geq 0} \frac{(-1)^k}{4^k} \binom{2k}{k}x^k<br>\end{equation}<br>再經由變數變換後，將 $x$ 換為 $-4x$ ，可得<br>\begin{equation}<br>(1-4x)^{\frac{-1}{2}}=\dfrac{1}{\sqrt{1-4x}} =\sum</em>{k \geq 0}\frac{(-1)^k}{4^k}(-4x)^k =\sum_{k \geq 0}\binom{2k}{k}x^k =F(x)<br>\end{equation}<br>所以，整理可得 $F^2(x)$ 的 $n$ 一般形式與冪形式 (power form)<br>\begin{equation}<br>F^2(x)=\frac{1}{1-4x} = 1+4x +16x^2 + \dots + 4^nx^n +\dots<br>\end{equation}<br>所以， $(1.1)$ 式的值為 $F^2(x)$ 的 $n$ 次方係數，即 $4^n$ 。</p>
+<h2 id="指數生成函數"><a href="#指數生成函數" class="headerlink" title="指數生成函數"></a>指數生成函數</h2><p>除了前面定義過的普通生成函數 ( 亦稱做多項式生成函數 ) 之外，我們再介紹一種生成函數，稱作指數生成函數：</p>
+<blockquote>
+<p><strong>指數生成函數 (exponential generating function)</strong><br> 給定一個數列 ${a<em>k}^{\infty}</em>{k=0}$ ，則函數<br> \begin{equation}<br>  f(x)=\sum^{\infty}_{k=0}a_k\frac{x^k}{k!}=a_0+a_1\frac{x}{1!}+ \dots + a_k\frac{x^n}{n!} + \dots<br> \end{equation}<br> 稱為此數列之指數生成函數。</p>
+</blockquote>
+<p> <br> </p>
+<p>以下我們看一個高中生勉強可以做的例子：</p>
+<blockquote>
+<p>若有 $11$ 個新員工，要分配到甲、乙、丙、丁 $4$ 個部門，每個部門至少分配到一個員工的方法數有幾種？</p>
+</blockquote>
+<p>高中常見的做法是考慮排容原理：</p>
+<p>$$<br>\left.<br>\begin{array}{}<br>n(所求) = n(全) - n(其中一個部門沒人)  \<br>= n(全) - n( \bar{甲} \cup \bar{乙} \cup \bar{丙} \cup \bar{丁} ) \<br>= n(全) - (n( \bar{甲}) + n(\bar{乙}) + n(\bar{丙}) + n(\bar{丁}) - n( \bar{甲} \cap \bar{乙}) +\dots ) \dots )<br>\end{array}<br>\right.<br>$$</p>
+<p>也有人把最後的結論當公式記憶，其答案為<br>\begin{equation}<br>1\cdot4^{11} - 4\cdot 4^{10} +6\cdot 4^9 -4 \cdot 4^8 +1\cdot 4^7. \tag{3.1}<br>\end{equation}<br>現在，我們考慮使用指數生成函數來看這個問題，就會變得簡潔許多，也就是考慮<br>\begin{equation}<br>f(x)=(x+\frac{x^2}{2!}+\frac{x^3}{3!}+ \dots )^4<br>\end{equation}<br>其中，括弧內沒有 $1$ 而是從 $x$ 開始，代表至少要有一個員工，又因為四個部門的限制相同，所以所求為四次方。往下整理得<br>\begin{equation}<br>f(x)=(e^x -1)^4 = e^{4x} -4e^{3x}+6e^{2x}-4e^{x}+1<br>\end{equation}<br>所以，所求為 $\frac{x^{11}}{11!}$ 的係數，也就是 $(3.1)$ 式的值： $1\cdot4^{11} - 4\cdot 4^{10} +6\cdot 4^9 -4 \cdot 4^8 +1\cdot 4^7$ 。<br>往下還有個有趣的觀察，如果現在考慮的是全錯排，那麼有些漂亮的結果。</p>
+<h2 id="當組合與機率遇上分析：全錯排之機率"><a href="#當組合與機率遇上分析：全錯排之機率" class="headerlink" title="當組合與機率遇上分析：全錯排之機率"></a>當組合與機率遇上分析：全錯排之機率</h2><p>由上一節可以輕易得到全錯排的表示法，而中學在教古典機率時，常會有以下一個問題：</p>
+<blockquote>
+<p>若有 $5$ 封不同信要裝入 $5$ 個不同的信封袋，則求完全裝錯的機率為？</p>
+</blockquote>
+<p>高中常見的做法是一樣考慮排容原理，用 $(3.1)$ 式的方法先計算全錯排的方法數： $44$，最後再將分母除以 $5!$ ，也就是所有隨便放的可能性，其結果為<br>\begin{equation}<br>\frac{44}{5!} = \frac{11}{30} \approx 0.367<br>\end{equation}</p>
+<p>那如果我們把問題做個延伸，變成 $10$ 封信裝入 $10$ 個不同信封皆裝錯的機率呢？ $100$ 封信呢？這有極限值嗎？有趣的是，這正好可以藉由指數生成函數來求解。考慮<br>\begin{equation}<br>(1+x+\frac{x^2}{2!}+\dots)^n<br>\end{equation}<br>展開之 $x^n$ 係數即為所求，且此係數為<br>\begin{equation}<br>\dfrac{\binom{n}{0}n! - \binom{n}{1}(n-1)! + \binom{n}{2}(n-2)! + \dots + (-1)^k\binom{n}{k}(n-k)! +\dots }{n!}<br>\end{equation}<br>再來，我們可以觀察，當 $n$ 很大時，此式明顯收斂：<br>\begin{align}<br>&amp;\lim \limits<em>{n \to \infty} \dfrac{\binom{n}{0}n! - \binom{n}{1}(n-1)! + \binom{n}{2}(n-2)! + \dots + (-1)^k\binom{n}{k}(n-k)! +\dots }{n!}&amp; \notag  \<br> &amp;=\lim \limits</em>{n\to \infty}(1-\frac{1}{n})^n=\frac{1}{e}\approx 0.368 &amp;<br>\end{align}<br>這給出一個很奇妙、很有趣、也很不值觀的結論，首先，奇妙的是組合學竟然與分析上常用的常數 $e$ 在此相遇，非常不可思議，再來，這結論也很不直觀，一般來說，我們會覺得現在有非常非常多封信，全部都裝錯的機率應該很低，但事實上此機率大於三成，甚至在 $n=5$ 時就已經相當接近極限值了，是個非常有趣的結果。</p>
 
       
     </div>
@@ -475,7 +506,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-動機：組合級數"><span class="nav-number">1.</span> <span class="nav-text">1 動機：組合級數</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#動機：組合級數"><span class="nav-number">1.</span> <span class="nav-text">動機：組合級數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成函數"><span class="nav-number">2.</span> <span class="nav-text">生成函數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指數生成函數"><span class="nav-number">3.</span> <span class="nav-text">指數生成函數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#當組合與機率遇上分析：全錯排之機率"><span class="nav-number">4.</span> <span class="nav-text">當組合與機率遇上分析：全錯排之機率</span></a></li></ol></div>
             
 
           </div>
