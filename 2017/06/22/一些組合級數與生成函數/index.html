@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="動機：組合級數  這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子：  \begin{equation}    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k} \end{equation}   也就是要算">
+<meta name="description" content="動機：組合級數  數學之浩瀚實在出乎意料。這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們要處理一個有點神奇的組合學計數問題，這個問題是這樣的：  考慮座標平面上，由原點出發，每次只走右或上一格，最終抵達終點 $(n,n)$ ，則這些路徑在行進中，總共會碰到幾次如 $(0,0)$,$(1,1)$,$dots$,$(n,n)$的點幾次？    當中使用了算兩次">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一些組合級數與生成函數">
 <meta property="og:url" content="http://craig100.github.io/2017/06/22/一些組合級數與生成函數/index.html">
 <meta property="og:site_name" content="幽默數社">
-<meta property="og:description" content="動機：組合級數  這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子：  \begin{equation}    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k} \end{equation}   也就是要算">
-<meta property="og:updated_time" content="2017-07-01T13:44:32.000Z">
+<meta property="og:description" content="動機：組合級數  數學之浩瀚實在出乎意料。這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們要處理一個有點神奇的組合學計數問題，這個問題是這樣的：  考慮座標平面上，由原點出發，每次只走右或上一格，最終抵達終點 $(n,n)$ ，則這些路徑在行進中，總共會碰到幾次如 $(0,0)$,$(1,1)$,$dots$,$(n,n)$的點幾次？    當中使用了算兩次">
+<meta property="og:updated_time" content="2017-07-01T17:04:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些組合級數與生成函數">
-<meta name="twitter:description" content="動機：組合級數  這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子：  \begin{equation}    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k} \end{equation}   也就是要算">
+<meta name="twitter:description" content="動機：組合級數  數學之浩瀚實在出乎意料。這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們要處理一個有點神奇的組合學計數問題，這個問題是這樣的：  考慮座標平面上，由原點出發，每次只走右或上一格，最終抵達終點 $(n,n)$ ，則這些路徑在行進中，總共會碰到幾次如 $(0,0)$,$(1,1)$,$dots$,$(n,n)$的點幾次？    當中使用了算兩次">
 
 
 
@@ -359,7 +359,11 @@
       
 
       
-        <h2 id="動機：組合級數"><a href="#動機：組合級數" class="headerlink" title="動機：組合級數"></a>動機：組合級數</h2><p>  這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子：</p>
+        <h2 id="動機：組合級數"><a href="#動機：組合級數" class="headerlink" title="動機：組合級數"></a>動機：組合級數</h2><p>  數學之浩瀚實在出乎意料。這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們要處理一個有點神奇的組合學計數問題，這個問題是這樣的：</p>
+<blockquote>
+<p>考慮座標平面上，由原點出發，每次只走右或上一格，最終抵達終點 $(n,n)$ ，則這些路徑在行進中，總共會碰到幾次如 $(0,0)$,$(1,1)$,$dots$,$(n,n)$的點幾次？</p>
+</blockquote>
+<p>  當中使用了算兩次 (double counting) 的技巧，但因為不是本篇文章的重點，我們就先略過，最後經過一番努力後，會得到以下式子：</p>
 <p> \begin{equation}<br>    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k}<br> \end{equation}</p>
 <p>  也就是要算</p>
 <p> \begin{equation}<br>    \binom{0}{0} \binom{2n}{n}+ \binom{2}{1}\binom{2n-2}{n-1} +\binom{4}{2}\binom{2n-4}{n-2} + \dots +\binom{2n}{n} \binom{0}{0}<br> \end{equation}</p>
@@ -390,10 +394,10 @@
 <p>所以，合併 (8)(9) 式後可得：</p>
 <p>\begin{equation}<br>(1+x)^{\frac{-1}{2}}=\sum_{k \geq 0} \frac{(-1)^k}{4^k} \binom{2k}{k}x^k<br>\end{equation}</p>
 <p>再經由變數變換後，將 $x$ 換為 $-4x$ ，可得</p>
-<p>\begin{equation}<br>(1-4x)^{\frac{-1}{2}} = \frac{1}{\sqrt{1-4x}} = \sum_{k \geq 0} \frac{(-1)^k}{4^k}(-4x)^k<br>\end{equation}</p>
+<p>\begin{equation}<br>(1-4x)^{\frac{-1}{2}} = \frac{1}{\sqrt{1-4x}} = \sum_{k \geq 0} \frac{(-1)^k}{4^k}\binom{2k}{k}(-4x)^k<br>\end{equation}</p>
 <p>於是發現</p>
 <p>\begin{equation}<br> = \sum_{k \geq 0} \binom{2k}{k}x^k = F(x)<br>\end{equation}</p>
-<p>所以，整理可得 $F^2(x)$ 的 $n$ 一般形式與冪形式 (power form)</p>
+<p>所以，整理可得 $F^2(x)$ 的 $n$ 次方係數與冪形式 (power form)</p>
 <p>\begin{equation}<br>F^2(x)=\frac{1}{1-4x} = 1+4x +16x^2 + \dots + 4^nx^n +\dots<br>\end{equation}</p>
 <p>所以， (2) 式的值為 $F^2(x)$ 的 $n$ 次方係數，即 $4^n$ 。</p>
 <h2 id="指數生成函數"><a href="#指數生成函數" class="headerlink" title="指數生成函數"></a>指數生成函數</h2><p>除了前面定義過的普通生成函數 ( 亦稱做多項式生成函數 ) 之外，我們再介紹一種生成函數，稱作指數生成函數：</p>
@@ -421,7 +425,7 @@
 <p>\begin{equation}<br>\lim_{n \to \infty} \frac{\binom{n}{0}n! - \binom{n}{1}(n-1)! + \binom{n}{2}(n-2)! + \dots + (-1)^k\binom{n}{k}(n-k)! +\dots }{n!}<br>\end{equation}</p>
 <p>即</p>
 <p>\begin{equation}<br> =\lim_{n\to \infty}(1-\frac{1}{n})^n=\frac{1}{e}\approx 0.368<br>\end{equation}</p>
-<p>這給出一個很奇妙、很有趣、也很不值觀的結論，首先，奇妙的是組合學竟然與分析上常用的常數 $e$ 在此相遇，非常不可思議，再來，這結論也很不直觀，一般來說，我們會覺得現在有非常非常多封信，全部都裝錯的機率應該很低，但事實上此機率大於三成，甚至在 $n=5$ 時就已經相當接近極限值了，是個非常有趣的結果。</p>
+<p>這給出一個很奇妙、很有趣、也很不直觀的結論，首先，奇妙的是組合學竟然與分析上常用的常數 $e$ 在此相遇，非常不可思議，再來，這結論也很不直觀，一般來說，我們會覺得現在有非常非常多封信，全部都裝錯的機率應該很低，但事實上此機率大於三成，甚至在 $n=5$ 時就已經相當接近極限值了，是個非常有趣的結果。</p>
 
       
     </div>

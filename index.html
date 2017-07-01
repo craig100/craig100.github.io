@@ -363,7 +363,11 @@
 
       
         
-          <h2 id="動機：組合級數"><a href="#動機：組合級數" class="headerlink" title="動機：組合級數"></a>動機：組合級數</h2><p>  這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們因為要處理一個組合級數的計數問題，使用了算兩次 (double counting) 的技巧，於是得到以下式子：</p>
+          <h2 id="動機：組合級數"><a href="#動機：組合級數" class="headerlink" title="動機：組合級數"></a>動機：組合級數</h2><p>  數學之浩瀚實在出乎意料。這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們要處理一個有點神奇的組合學計數問題，這個問題是這樣的：</p>
+<blockquote>
+<p>考慮座標平面上，由原點出發，每次只走右或上一格，最終抵達終點 $(n,n)$ ，則這些路徑在行進中，總共會碰到幾次如 $(0,0)$,$(1,1)$,$dots$,$(n,n)$的點幾次？</p>
+</blockquote>
+<p>  當中使用了算兩次 (double counting) 的技巧，但因為不是本篇文章的重點，我們就先略過，最後經過一番努力後，會得到以下式子：</p>
 <p> \begin{equation}<br>    \sum^{n}_{k=0} \binom{2k}{k} \binom{2n-2k}{n-k}<br> \end{equation}</p>
 <p>  也就是要算</p>
 <p> \begin{equation}<br>    \binom{0}{0} \binom{2n}{n}+ \binom{2}{1}\binom{2n-2}{n-1} +\binom{4}{2}\binom{2n-4}{n-2} + \dots +\binom{2n}{n} \binom{0}{0}<br> \end{equation}</p>
