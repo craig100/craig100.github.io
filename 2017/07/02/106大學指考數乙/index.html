@@ -1,0 +1,823 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-tw">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="又到了一年一度的指考啦，筆者其實每年都會在第一時間放下手邊的是趕快來解一波，這份考題算相當平易近人，我中午一邊吃飯一邊看，大概花了30分鐘左右，但有一題要稍微麻煩一點我沒算。我會在詳解中寫的儘量詳細，但因為對 hexo 還不夠熟悉，如果有打錯一定要跟我說～～ 那我們開始吧！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="106大學指考數乙">
+<meta property="og:url" content="http://craig100.github.io/2017/07/02/106大學指考數乙/index.html">
+<meta property="og:site_name" content="幽默數社">
+<meta property="og:description" content="又到了一年一度的指考啦，筆者其實每年都會在第一時間放下手邊的是趕快來解一波，這份考題算相當平易近人，我中午一邊吃飯一邊看，大概花了30分鐘左右，但有一題要稍微麻煩一點我沒算。我會在詳解中寫的儘量詳細，但因為對 hexo 還不夠熟悉，如果有打錯一定要跟我說～～ 那我們開始吧！">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/0.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/1.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/2.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/3.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/4.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/5.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/6.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/6fig.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/7.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/8.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/9.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/10.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/11.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/12.png">
+<meta property="og:updated_time" content="2017-07-03T15:37:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="106大學指考數乙">
+<meta name="twitter:description" content="又到了一年一度的指考啦，筆者其實每年都會在第一時間放下手邊的是趕快來解一波，這份考題算相當平易近人，我中午一邊吃飯一邊看，大概花了30分鐘左右，但有一題要稍微麻煩一點我沒算。我會在詳解中寫的儘量詳細，但因為對 hexo 還不夠熟悉，如果有打錯一定要跟我說～～ 那我們開始吧！">
+<meta name="twitter:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/0.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '作者'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://craig100.github.io/2017/07/02/106大學指考數乙/"/>
+
+
+
+
+
+  <title>106大學指考數乙 | 幽默數社</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'goUA-101947479-1', 'auto');
+  ga('send', 'pageview');
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">幽默數社</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            關於
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://craig100.github.io/2017/07/02/106大學指考數乙/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Craig">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="幽默數社">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">106大學指考數乙</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-07-02T21:20:43+08:00">
+                2017-07-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/02/106大學指考數乙/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/07/02/106大學指考數乙/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <img src="/2017/07/02/106大學指考數乙/0.png" alt="0.png" title="">
+<p>又到了一年一度的指考啦，筆者其實每年都會在第一時間放下手邊的是趕快來解一波，這份考題算相當平易近人，我中午一邊吃飯一邊看，大概花了30分鐘左右，但有一題要稍微麻煩一點我沒算。我會在詳解中寫的儘量詳細，但因為對 hexo 還不夠熟悉，如果有打錯一定要跟我說～～</p>
+<p>那我們開始吧！</p>
+<a id="more"></a>
+<img src="/2017/07/02/106大學指考數乙/1.png" alt="1.png" title="">
+<p>這題來說，因為 $0$ 和 $2$ 代入是零，而且首項係數是 $1$ ，我們知道三次多項式只會有四個未知數，所以剩下唯一的未知數就是第三根了，也就是說，其實只需要假設</p>
+<script type="math/tex; mode=display">f(x)=(x-0)(x-2)(x-k)</script><p>即可，再將 $ (3,4) $ 帶入，即可解得 $ k=2 $ ，所以原多項式為 </p>
+<script type="math/tex; mode=display">f(x)=x(x-2)^2=x^3-4x^2+4x</script><p>故 $ a+2b+c = -4 +2\cdot 4 +0 =4 $ ，<br>故選 (4).</p>
+<p>$\cdot$ 點評：看了看，就是要學生會假設三次函數的 root form ，在二次中很常見的兩根式，在三次中也可以派上用場，算是很標準的習題，尤其在高一上的多項式那邊有大量的練習。</p>
+<img src="/2017/07/02/106大學指考數乙/2.png" alt="2.png" title="">
+<p>稍微觀察一下可以發現，每個選項的底數都是 $2$ 的次方，而且剛好是 $2^1,2^2,\dots,2^5$ ，而真數都是 $2$ 和 $3$ 的組合，而且規律是 $2^03^1,2^13^2,2^23^1,\dots,2^43^1$ ，觀察到這樣的結論後，換個底會發現一件驚人的事：</p>
+<script type="math/tex; mode=display">(1)=\frac{ 0\log2+1\log3 }{\log2 }</script><script type="math/tex; mode=display">(2)=\frac{ 1\log2+1\log3}{2\log2}</script><script type="math/tex; mode=display">(3)=\frac{ 2\log2+1\log3}{3\log2}</script><script type="math/tex; mode=display">(4)=\frac{ 3\log2+1\log3}{4\log2}</script><script type="math/tex; mode=display">(5)=\frac{ 4\log2+1\log3}{5\log2}</script><p>看出規則了嗎，因為是在比大小，所以大家分母的 $\log2$ 都不要理他，那剩下的東西不正是內分點嗎，喔耶做完了，我們知道 $\log 3$ 比 $\log2$ 來得大，所以越靠近 $\log3$ ( 也就是 $\log3$ 前的係數或權重越大 ) 的值會越大，而 (1) 剛好就在 $ \log3 $ 這點，所以選 (1).</p>
+<p>$\cdot$ 法二：<br>這是一個比較幾何、直觀的看法，雖然考試中不太容易直接這樣看，我們可以想想看， $x=\log_a b$ 和 $y=\log_{2a} 2b$ 誰比較大，也就是說，要比 $a^x=b$ 和 $(2a)^y=2b$ 中的 $x,y$ 誰比較大，這結果很顯然，因為對於 $(2a)^y=2b$ 來說， $b =a^y\cdot 2^{y-1}$ ，而 $2^{y-1}$ 是以指數成長的，所以 $y$ 的值一定會被壓得很小，所以 $y &lt; x$ ，所以得到選項 (1) 是最大的值。<br>故選 (1).</p>
+<p>$\cdot$ 點評：這題算是出的有點水準，一般的考生會記憶 $\log{1}$ ~ $\log{10}$ 的值，然後再卯起來唏哩呼嚕地拼命算而缺少觀察，那就正中這題的陷阱了。</p>
+<img src="/2017/07/02/106大學指考數乙/3.png" alt="3.png" title="">
+<p>首先，方便起見先定義符號： $p(1)$ 代表丟出一點的機率，其他以此類推，根據題意有：<br>$p(1)+p(3)=0.2$, $p(2)+p(4)=0.4$, $p(5)+p(6)=0.4$<br>(1) 只知道 $p(1)+p(3)=0.2$ ，並沒有說 $p(1)=p(3)$ 故不保證 $p(1)=0.1$.<br>(2) 和 (1) 類似，我們並不確定 $p(4)$ 的值<br>(3) 和 (1) 類似，我們並不確定 $p(6)$ 的值，只知道 $p(2)+p(4)=0.4$ 而已。<br>(4) 和 (3) 類似，我們並不確定 $p(5)$ 的值，只知道 $p(1)+p(3)=0.2$ 而已，若 $p(5)$ 的值是 $0.39$ ，則出現奇數的機率高達 $0.59$ ，顯然大於題目所說的 $0.5$ 。<br>(5)是個很有趣的估計題<br>考慮期望值的定義</p>
+<script type="math/tex; mode=display">E(X)=\sum_i f(x_i)x_i</script><p>意思是在隨機變數 $X$ 內的所有事件點，通通乘上其對應的機率，再加總。<br>白話文就是機率乘結果，然後加加加。</p>
+<p>隨機變數的真正意義在高中其實有點難解釋，他真正的意義是把事件對量化的函數，但因為需要用到一些很抽象的數學概念，所以高中課本也只是這樣寫：</p>
+<blockquote>
+<p>『用來表示種種隨機結果的變數 $X$ 稱之為隨機變數，通常以大寫的英文字母表示，而可能發生的數值則以對應的小寫字母表示4寫成符號 $X=x$ ( 我們將 這個形式說成「隨機變數 $X$ 取值 $x$」) 如丟硬幣 $2$ 次時正面出現次數 $X$ 是一個隨機變數，其中 $X=0$ 表示出現 $0$ 正面的事件; $X=1$ 表示出現 $1$ 次正面的事件; $X=2$ 表示出現 $2$ 次正面的事件。在上述的例子中對隨機變數 $X$ 可能的取值可以按次序一一列出，這樣的隨機變數稱為<strong>離散型隨機變數</strong>』 — 龍騰課本選修課本上冊</p>
+</blockquote>
+<p>好回到這個問題，這個怪怪骰的期望值是：</p>
+<script type="math/tex; mode=display">1p(1)+2p(2)+3p(3)+4p(4)+5p(5)+6p(6)</script><p>但觀察，我們知道 $ p(1)+p(3)=0.2 $, $ p(2)+p(4)=0.4 $, $ p(5)+p(6)=0.4 $ ，所以我們可以做一個估計，把確定的數值寫起來，不確定的就放著，於是先把加法順序稍微換一下以方便估計，也就是</p>
+<script type="math/tex; mode=display">1p(1)+3p(3)+2p(2)+4p(4)+5p(5)+6p(6)</script><p>接著把已知條件帶入</p>
+<script type="math/tex; mode=display">(0.2+2p(3)) + (0.8+2p(4)) +( 2+p(6) )</script><p>又因為每項機率值都是非負的，所以上式給出了此期望值的最小值，或稱下界，是 $3$ 。<br>故選 (4).</p>
+<p>$\cdot$ 點評：個人認為這題出得不錯，一個好的題目不能只要考生算答案，應該需要一點分析、估計、判斷在裡頭，可是唯一有個缺點，就是選項 (1)(2)(3)(4) 太好判斷了，而且這題是單選題，所以應該有不少人猜中。</p>
+<img src="/2017/07/02/106大學指考數乙/4.png" alt="4.png" title="">
+<p>(1) 開口向上，必過第一象限 ( 因為圖形會向右上升 )<br>(2) 開口向下可以不經過第一象限，只要把拋物線往下平移，移得夠低就好。<br>(3) 判別式大於 $0$ ，和 $x$ 軸有兩交點，但並不確保會過第一象限。<br>(4) 原圖形必過 $(0,c)$ 這點，所以當 $c&gt;0$ ，拋物線會和 $y$ 軸交在 $y&gt;0$ 處，此時拋物線必過第一象限。<br>(5) 同 (4) 的判斷，和 $y$ 軸交在 $y&lt;0$ 並不保證一定過第一象限。</p>
+<p>故選 (1)(4).</p>
+<p>$\cdot$ 點評：非常不應該的題目，出得非常不好，我同意一份大考題要有一些基本題給同學們做，但這題完全不需要高中知識，如果真的要出基本題，也至少要提到一些高中有提而國中沒提的概念，否則有點在打臉高中三年的課程。</p>
+<img src="/2017/07/02/106大學指考數乙/5.png" alt="5.png" title="">
+<p>易知， $a_n = (\frac{1}{2})^n$ ，此題在問數列的收斂性，也就是在問各個選項的數列 {$b_k$} 其極限 </p>
+<script type="math/tex; mode=display">\lim_{n \to \infty} b_n</script><p>是否為 $0$.<br>(1) $ b_k=-a_k $ 則 </p>
+<script type="math/tex; mode=display">\lim_{n\to\infty}-(\frac{1}{2})^n=0</script><p>(2) $b_k=a_k^2$ 則 </p>
+<script type="math/tex; mode=display">\lim_{n\to\infty}(\frac{1}{2})^2n=0</script><p>(3) $b_k=\sqrt{a_k}$ 則 </p>
+<script type="math/tex; mode=display">\lim_{n\to\infty}(\frac{1}{2})^{n/2}=0</script><p>(4) $b_k=\frac{1}{a_k}$ 則 </p>
+<script type="math/tex; mode=display">\lim_{n\to\infty}2^n \to \infty</script><p>(5) $b_k=\log a_k$ 則 </p>
+<script type="math/tex; mode=display">\lim_{n\to\infty} ( \log \frac{1}{2^n} ) = \lim_{n\to\infty}(-n\log2) \to -\infty</script><p>故選 (1)(2)(3).</p>
+<p>$\cdot$ 點評：同時結合了等比級數、數列收斂，但其實就是在考極限的計算，出得還不錯，不刁難考生，只要懂定義就可以做了，但極限太容易了一些。</p>
+<img src="/2017/07/02/106大學指考數乙/6.png" alt="6.png" title="">
+<p>總之我們直接畫圖吧。<br><img src="/2017/07/02/106大學指考數乙/6fig.png" alt="6fig.png" title=""><br>綠色這條是 $y=\log_2 x$ ，紅色的是 $y=\log_{\frac{1}{2}}x = -\log_2 x$ ，不論是從方程式或從圖形，都可以看出兩函數對稱於 $x$ 軸，而且對於此二函數來說， $y$ 軸都是他們的漸近線。而且此二函數唯一只交在 $(1,0)$ 這個點。<br>故選 (1)(4)(5).</p>
+<p>$\cdot$ 點評：呃…，我看完這題的想法是：花惹發。也太容易了，完全就是在問你知不知道這兩個圖形長怎樣，筆者真心認為，近幾年指考真的比學測容易的很多很多，不論數甲、數乙，都是。</p>
+<img src="/2017/07/02/106大學指考數乙/7.png" alt="7.png" title="">
+<img src="/2017/07/02/106大學指考數乙/8.png" alt="8.png" title="">
+<p>考慮</p>
+<script type="math/tex; mode=display">\left| \vec{u}-\vec{v} \right|^2 = \left| \vec{u} \right|^2 + \left| \vec{v} \right|^2 -2\vec{u} \cdot \vec{v}</script><p>又因為 $\vec{u}$ 垂直 $\vec{v}$ 所以內積為零。<br>再依題目條件，由向量的座標表示法算長度：</p>
+<script type="math/tex; mode=display">\sqrt{4^2+(-7)^2}^2 = 6^2 + \right| \vec{v} \left|^2$ -2\cdot 0</script><p>解得 $ \right| \vec{v} \left| =\sqrt{29}$</p>
+<img src="/2017/07/02/106大學指考數乙/9.png" alt="9.png" title="">
+<img src="/2017/07/02/106大學指考數乙/10.png" alt="10.png" title="">
+<img src="/2017/07/02/106大學指考數乙/11.png" alt="11.png" title="">
+<img src="/2017/07/02/106大學指考數乙/12.png" alt="12.png" title="">
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/22/一些組合級數與生成函數/" rel="next" title="一些組合級數與生成函數">
+                <i class="fa fa-chevron-left"></i> 一些組合級數與生成函數
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Craig" />
+          <p class="site-author-name" itemprop="name">Craig</p>
+           
+              <p class="site-description motion-element" itemprop="description">1992 年生，是個國中念過放牛班的小孩。後來畢業於台大數學系，就學期間曾修習教育學程、並擔任台大教育學程學會 20th 會長，畢業後在台北市某明星高中實習，現在在台大應數所就讀中。對於數學、教育以及數學教育有一定程度的敏銳，此外，也可以算是個業餘社會觀察家，興趣是拍拍照、寫寫文章。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">文章</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/profile.php?id=100000043107399" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="b00201061@ntu.edu.tw" target="_blank" title="E-mail">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  E-mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Craig</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://mathjoking.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://craig100.github.io/2017/07/02/106大學指考數乙/';
+          this.page.identifier = '2017/07/02/106大學指考數乙/';
+          this.page.title = '106大學指考數乙';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://mathjoking.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

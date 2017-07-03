@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://craig100.github.io/2017/06/22/一些組合級數與生成函數/index.html">
 <meta property="og:site_name" content="幽默數社">
 <meta property="og:description" content="動機：組合級數  數學之浩瀚實在出乎意料。這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們要處理一個有點神奇的組合學計數問題，這個問題是這樣的：  考慮座標平面上，由原點出發，每次只走右或上一格，最終抵達終點 $(n,n)$ ，則這些路徑在行進中，總共會碰到形如 $(0,0)$,$(1,1)$,$\dots$,$(n,n)$ 的點幾次？    當中使用了算兩次">
-<meta property="og:updated_time" content="2017-07-01T17:13:11.000Z">
+<meta property="og:updated_time" content="2017-07-03T12:19:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些組合級數與生成函數">
 <meta name="twitter:description" content="動機：組合級數  數學之浩瀚實在出乎意料。這學期，筆者在師大修了一門課，叫做數學教學解題研究，是游森棚教官開的課。在課堂中，我們要處理一個有點神奇的組合學計數問題，這個問題是這樣的：  考慮座標平面上，由原點出發，每次只走右或上一格，最終抵達終點 $(n,n)$ ，則這些路徑在行進中，總共會碰到形如 $(0,0)$,$(1,1)$,$\dots$,$(n,n)$ 的點幾次？    當中使用了算兩次">
@@ -377,16 +377,16 @@
 <p>現在我們可以做一些簡單的觀察，例如，考慮</p>
 <p>\begin{equation}<br>(1+ax)(1+bx)(1+cx)=1+(a+b+c)x+(ab+bc+ac)x^2+abcx^3<br>\end{equation}</p>
 <p>這個乘法的結構很單純，右式的一次方、二次方與三次方項係數，分別是 $a,b,c$ 的基本對稱多項式 (symmetry polynomial) 。當然，這個式子有組合的意義：我們將 $a,b,c$ 看成三個物品，而常數項 $1$ 表示在三物品中一個都不取， $x$ 的一次方係數 $a+b+c$ 表示在 $a,b,c$ 中取一個的所有組合，即取 $a$ 、取 $b$ 或取 $c$，而 $x$ 的二次方係數 $ab+bc+ac$ 表示取二個的各種組合，最後， $x$ 的三次方係數表示了三個皆取的唯一方法。在這裡可能產生各種情形是用 $+$ 號連接，代表加法原理，同時發生之事件則用 $\cdot$ 號，代表乘法原理。</p>
-<p>所以回到式 (2) 的問題，我們可以定義一個數列 $a_n$ ，其中對於所有正整數 $k$ 有</p>
-<p>\begin{equation}<br>a_k = \binom{2k}{k}<br>\end{equation}</p>
-<p>並以此構造其生成函數：</p>
+<p>所以回到式 (2) 的問題，我們可以定義一個數列： $ \left{ a_k \right} $ ，其中對於所有正整數 $k$ 有</p>
+<script type="math/tex; mode=display">a\_k = \binom{2k}{k}</script><p>並以此構造其生成函數：</p>
 <p>\begin{equation}<br>F(x)=\binom{0}{0} + \binom{2}{1}x +\binom{4}{2}x^2 + \dots +\binom{2n}{n}x^n+\dots<br>\end{equation}</p>
 <p>巧妙地，我們可以透過 (4) 式的觀察，發現我們在 (2) 式所求，即為 $F^2(x)$ 的 $n$ 次方係數。所以，現在的問題是， $F(x)$ 的確切型式 (exact form) 是什麼？</p>
 <p>以下，我們先定義廣義的組合數：</p>
 <blockquote>
 <p><strong>廣義組合數 (generalized binomial number)</strong><br> 若 $\alpha$ 為任意實數，則我們可定義廣義組合數為：<br> \begin{equation}<br>   \binom{\alpha}{k}=\dfrac{\alpha (\alpha -1) \dots (\alpha -(k-1))}{k!}<br> \end{equation}</p>
 </blockquote>
-<p>很自然地，因為 $\alpha$ 為任意實數，所以二項式定理可以被推廣為<br>$$ (x+y)^{\alpha} = \sum^{\infty}_{k=0} \binom{\alpha}{k} x^{\alpha -k}y^k $$<br>此式即為牛頓廣義二項式定理 (Newton’s generalized binomial theorem) 。</p>
+<p>很自然地，因為 $\alpha$ 為任意實數，所以二項式定理可以被推廣為</p>
+<script type="math/tex; mode=display">(x+y)^{\alpha} = \sum^{\infty}_{k=0} \binom{\alpha}{k} x^{\alpha -k}y^k</script><p>此式即為牛頓廣義二項式定理 (Newton’s generalized binomial theorem) 。</p>
 <p>現在我們利用此定義，非常技巧性的求出 $F(x)$ 。<br> <br><br>考慮</p>
 <p>\begin{equation}<br>(1+x)^{\frac{-1}{2}}=\sum_{k=0}^{\infty} \binom{\frac{-1}{2}}{k}x^k = \sum_{k\geq 0} \binom{\frac{-1}{2}}{k}x^k<br>\end{equation}</p>
 <p>其中</p>
@@ -472,6 +472,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/07/02/106大學指考數乙/" rel="prev" title="106大學指考數乙">
+                106大學指考數乙 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -549,7 +553,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">文章</span>
               </a>
             </div>
