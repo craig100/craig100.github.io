@@ -111,9 +111,11 @@
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/8.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/9.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/10.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/10fig.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/11.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/11fig.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/12.png">
-<meta property="og:updated_time" content="2017-07-03T15:37:00.000Z">
+<meta property="og:updated_time" content="2017-07-03T22:26:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="106大學指考數乙">
 <meta name="twitter:description" content="又到了一年一度的指考啦，筆者其實每年都會在第一時間放下手邊的是趕快來解一波，這份考題算相當平易近人，我中午一邊吃飯一邊看，大概花了30分鐘左右，但有一題要稍微麻煩一點我沒算。我會在詳解中寫的儘量詳細，但因為對 hexo 還不夠熟悉，如果有打錯一定要跟我說～～ 那我們開始吧！">
@@ -420,10 +422,68 @@
 <img src="/2017/07/02/106大學指考數乙/8.png" alt="8.png" title="">
 <p>考慮</p>
 <script type="math/tex; mode=display">\left| \vec{u}-\vec{v} \right|^2 = \left| \vec{u} \right|^2 + \left| \vec{v} \right|^2 -2\vec{u} \cdot \vec{v}</script><p>又因為 $\vec{u}$ 垂直 $\vec{v}$ 所以內積為零。<br>再依題目條件，由向量的座標表示法算長度：</p>
-<script type="math/tex; mode=display">\sqrt{4^2+(-7)^2}^2 = 6^2 + \right| \vec{v} \left|^2$ -2\cdot 0</script><p>解得 $ \right| \vec{v} \left| =\sqrt{29}$</p>
+<script type="math/tex; mode=display">\sqrt{4^2+(-7)^2} ^2 = 6^2 + \left| \vec{v} \right|^2 -2 \cdot 0</script><p>解得 $ \left| \vec{v} \right| = \sqrt{29} $<br>故空格應填 $29$.</p>
+<p>$\cdot$ 點評： $86$ 學測、 $100$ 學測、 $95$ 數甲皆有過幾乎一樣的題目，這故事告訴我們考古題挺重要的。</p>
 <img src="/2017/07/02/106大學指考數乙/9.png" alt="9.png" title="">
+<p>如果看到『非負整數解』就唏哩呼嚕的 $H$ 下去，大概就中招了，排列組合的心法只有兩個字：窮舉。<br>近十年來的考試中，幾乎沒出過一個符號就算得出來的排列組合問題，即便有，也是那種給你詳解看半天也不知道為什麼會是這樣的 ( 例如 102 學測單選 5) ，總之，窮舉吧。<br>考慮 $x \geq y$ 且 $x+y \leq 47$ 並且注意到因為相加比 $47$ 小，所以要特別小心諸如 (24,24) 這種並非所求，即：<br>共 $1$ 項 ：(1,0)<br>共 $2$ 項 ：(2,0),(2,1)<br>共 $3$ 項 ：(3,0),(3,1),(3,2)<br>          …<br>共 $23$ 項：(22,0),(22,1),(22,2) … (22,22)<br>共 $24$ 項：(23,0),(23,1),(23,2) … (23,22),(23,23)<br>共 $24$ 項：(24,0),(24,1),(24,2) … (24,22),(24,23)<br>共 $23$ 項：(25,0),(25,1),(25,2) … (25.22)<br>          …<br>共 $2$ 項 ：(46,0),(46,1)<br>共 $1$ 項 ：(47,0)</p>
+<p>所求即為 </p>
+<script type="math/tex; mode=display">1+2+3+\dots +24+24+\dots +3+2+1</script><p>也就是</p>
+<script type="math/tex; mode=display">2\sum_{i=1}^{24}i=2\frac{24*25}{2}=600</script><p>故空格應填 $600$.</p>
+<p>$\cdot$ 點評：這題是這份裡面我非常愛的好題目，不落俗套，尤其學越多越有可能找自己麻煩。<br>《倚天屠龍劍》中，有一集很精彩，在一個很緊急的狀態下，張無忌被委派學習太極劍，而張三豐臨危授命，即時教他太極劍，去對付八臂神劍方東白。當時張三豐示範兩次，第一次示範後，就問張無忌看清楚沒有，張無忌說看清楚，但已忘記一小半。然後過了一會，又問張無忌，張無忌說忘了一大半。那時周顛很心急，勸張三豐劍招這麼深奧，看一遍怎記得，於是張三豐再示範，誰不知第二次示範，居然沒有一招是和第一次示範相同，正當眾人詫異的時候，他又問張無忌情況，張無忌回答還有三招未忘記，再過多一會兒，他回答說已經全部忘記。有趣的是，張三豐就在此時派張無忌去對付八臂神劍方東白，結果真的打勝仗。<br>排列組合就是這樣，張三豐要傳授的，是「劍意」而不是「劍招」，反而如果忘卻不了劍招，劍法便不能純，這就是所謂<strong>無招勝有招</strong>。</p>
 <img src="/2017/07/02/106大學指考數乙/10.png" alt="10.png" title="">
+<p>先做圖，越準確越好。<br><img src="/2017/07/02/106大學指考數乙/10fig.png" alt="10fig.png" title=""><br>這個作圖的難點是 (4,8) 和 (5,8) 他們的點與線的關係，筆者自己在做圖有兩個小賤招，第一個是在算不等式範圍的時候我會先偷解交點，有交點會讓你的圖更準，相反的，如果你先做完圖再去解交點，運氣好你又發現有問題那就試圖重畫，運氣不好沒發現有問題，那就是整題答錯。第二個小賤招是我會先考慮一個高度函數 $z=f(x,y)$ 其中我令 $x$ 開頭係數為正，在高二上線性規劃的時候，這招在講正號區與負號區，至於為什麼是正號、為什麼是負號，其實要在高二下才能解釋，這是一個吃 $(x,y)$ 座標吐高度 ( 可正可負 ) 的函數。</p>
+<p>回到這題，當你圖做好後，你知道 $C$ 點在中間那個不規則的四邊形裡面跑，可是我們要求得其實是三角形 $ABC$ 的面積，所以考慮給定三點求面積最快方法：向量行列式求面積。</p>
+<script type="math/tex; mode=display">\Delta = \frac{1}{2} \left|
+\begin{vmatrix} 
+\vec{AB} \\
+\vec{AC}
+\end{vmatrix} \right|
+=
+\frac{1}{2} \left|
+\begin{vmatrix} 
+-6 & 3\\
+x-4 & y+1
+\end{vmatrix} \right|
+= \frac{3}{2} \left| x+2y-4 \right|</script><p>我們不妨假設目標函函數 $g(x,y)=x+2y-4$ ，而且這條線的斜率是 $\frac{-1}{2}$ ，所以是一條左上右下的直線，那很容易看得出來，最先碰到與最慢碰到才會有最大與最小 ( 至於哪個分別是哪個，這待會再說，甚至在這題不重要 ) ，所以動點 $C$ 在 $B$ 點或在 $E$ 點會有極值出現，但如果 $C=B$ ，這個三角形面積是 $0$ 耶，那就不是最大啦，所以答案是發生在 $E$ 點。<br>故空格應填 (5,8).</p>
+<p>$\cdot$ 點評：中規中矩的問題，一點都不難，但作圖要細心些就是。</p>
 <img src="/2017/07/02/106大學指考數乙/11.png" alt="11.png" title="">
+<p>(1)<br>設轉移矩陣為 $A$ ，則</p>
+<script type="math/tex; mode=display">
+A = 
+\begin{bmatrix} 
+0.85 & 0.35\\
+0.15 & 0.65
+\end{bmatrix}</script><p>如果你每次都記反的話，可以這樣想：</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix} 
+變化一次後的甲的比率\\
+變化一次後的乙的比率
+\end{bmatrix}
+= 
+\begin{bmatrix} 
+a & b\\
+c & d
+\end{bmatrix}
+\begin{bmatrix} 
+起始的甲比率\\
+起始的乙比率
+\end{bmatrix}</script><p>這樣的寫法跟線性變化有 $87%$ 像，好啦沒錯，事實上轉移矩陣就是一種線性變換。<br>根據矩陣的乘法結構，可以知道變化過一次的甲的比率 ( 也就是後來的甲 ) 來自於兩個傢伙，分別來自 $ 起始的甲<em>a $ 與 $ 起始的乙</em>b $ ，言下之意， $a$ 就是原本是甲後來還很忠誠地留在甲的比率，而 $b$ 就是原本是乙可是後來叛逃到甲的比率，再根據轉移矩陣的特性，每一直行的總和是 $1$ ，於是寫這矩陣就跟喝水一樣輕鬆惹。</p>
+<p>(2)<br>所謂穩定，意思是在被轉移一次之後卻毫無改變，那麼假設這個穩定的比率分別是 $x,y$ 則寫成數學式就是</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix} 
+x\\
+y
+\end{bmatrix}
+=
+\begin{bmatrix} 
+0.85 & 0.35\\
+0.15 & 0.65
+\end{bmatrix}
+\begin{bmatrix} 
+x\\
+y
+\end{bmatrix}</script><p>再配上比率總和是 $1$ ，也就是 $x+y=1$ ，可解得 $x=0.7,y=0.3$ 。<br>也就是領取甲券的人佔 $70%$ 、領取乙券的人佔 $40%$ 時會形成穩定狀態。</p>
+<p>$\cdot$ 點評：這題是課本例題。<br><img src="/2017/07/02/106大學指考數乙/11fig.png" alt="11fig.png" title=""><br>取自全華課本第四冊 p156.</p>
 <img src="/2017/07/02/106大學指考數乙/12.png" alt="12.png" title="">
 
       
