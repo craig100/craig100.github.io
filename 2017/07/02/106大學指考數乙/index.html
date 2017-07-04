@@ -115,7 +115,7 @@
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/11.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/11fig.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/12.png">
-<meta property="og:updated_time" content="2017-07-04T00:25:21.000Z">
+<meta property="og:updated_time" content="2017-07-04T08:22:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="106大學指考數乙">
 <meta name="twitter:description" content="又到了一年一度的指考啦，筆者其實每年都會在第一時間放下手邊的是趕快來解一波，這份考題算相當平易近人，我中午一邊吃飯一邊看，大概花了30分鐘左右，但有一題要稍微麻煩一點我沒算。我會在詳解中寫的儘量詳細，但因為對 hexo 還不夠熟悉，如果有打錯一定要跟我說～～ 那我們開始吧！">
@@ -382,7 +382,7 @@
 <a id="more"></a>
 <img src="/2017/07/02/106大學指考數乙/1.png" alt="1.png" title="">
 <p>這題來說，因為 $0$ 和 $2$ 代入是零，而且首項係數是 $1$ ，我們知道三次多項式只會有四個未知數，所以剩下唯一的未知數就是第三根了，也就是說，其實只需要假設</p>
-<script type="math/tex; mode=display">f(x)=(x-0)(x-2)(x-k)</script><p>即可，再將 $ (3,4) $ 帶入，即可解得 $ k=2 $ ，所以原多項式為 </p>
+<script type="math/tex; mode=display">f(x)=(x-1)(x-2)(x-k)</script><p>即可，再將 $ (3,4) $ 帶入，即可解得 $ k=2 $ ，所以原多項式為 </p>
 <script type="math/tex; mode=display">f(x)=x(x-2)^2=x^3-4x^2+4x</script><p>故 $ a+2b+c = -4 +2\cdot 4 +0 =4 $ ，<br>故選 (4).</p>
 <p>$\cdot$ 點評：看了看，就是要學生會假設三次函數的 root form ，在二次中很常見的兩根式，在三次中也可以派上用場，算是很標準的習題，尤其在高一上的多項式那邊有大量的練習。</p>
 <img src="/2017/07/02/106大學指考數乙/2.png" alt="2.png" title="">
@@ -400,7 +400,7 @@
 <p>好回到這個問題，這個怪怪骰的期望值是：</p>
 <script type="math/tex; mode=display">1p(1)+2p(2)+3p(3)+4p(4)+5p(5)+6p(6)</script><p>但觀察，我們知道 $ p(1)+p(3)=0.2 $, $ p(2)+p(4)=0.4 $, $ p(5)+p(6)=0.4 $ ，所以我們可以做一個估計，把確定的數值寫起來，不確定的就放著，於是先把加法順序稍微換一下以方便估計，也就是</p>
 <script type="math/tex; mode=display">1p(1)+3p(3)+2p(2)+4p(4)+5p(5)+6p(6)</script><p>接著把已知條件帶入</p>
-<script type="math/tex; mode=display">(0.2+2p(3)) + (0.8+2p(4)) +( 2+p(6) )</script><p>又因為每項機率值都是非負的，所以上式給出了此期望值的最小值，或稱下界，是 $3$ 。<br>故選 (4).</p>
+<script type="math/tex; mode=display">(0.2+2p(3)) + (0.8+2p(4)) +( 2+p(6) )</script><p>又因為每項機率值都是非負的，所以上式給出了此期望值的最小值，或稱下界，是 $3$ 。<br>故選 (5).</p>
 <p>$\cdot$ 點評：個人認為這題出得不錯，一個好的題目不能只要考生算答案，應該需要一點分析、估計、判斷在裡頭，可是唯一有個缺點，就是選項 (1)(2)(3)(4) 太好判斷了，而且這題是單選題，所以應該有不少人猜中。</p>
 <img src="/2017/07/02/106大學指考數乙/4.png" alt="4.png" title="">
 <p>(1) 開口向上，必過第一象限 ( 因為圖形會向右上升 )<br>(2) 開口向下可以不經過第一象限，只要把拋物線往下平移，移得夠低就好。<br>(3) 判別式大於 $0$ ，和 $x$ 軸有兩交點，但並不確保會過第一象限。<br>(4) 原圖形必過 $(0,c)$ 這點，所以當 $c&gt;0$ ，拋物線會和 $y$ 軸交在 $y&gt;0$ 處，此時拋物線必過第一象限。<br>(5) 同 (4) 的判斷，和 $y$ 軸交在 $y&lt;0$ 並不保證一定過第一象限。</p>
@@ -494,7 +494,7 @@ y
 \begin{bmatrix} 
 x\\
 y
-\end{bmatrix}</script><p>再配上比率總和是 $1$ ，也就是 $x+y=1$ ，可解得 $x=0.7,y=0.3$ 。<br>也就是領取甲券的人佔 $70%$ 、領取乙券的人佔 $40%$ 時會形成穩定狀態。</p>
+\end{bmatrix}</script><p>再配上比率總和是 $1$ ，也就是 $x+y=1$ ，可解得 $x=0.7,y=0.3$ 。<br>也就是領取甲券的人佔 $70%$ 、領取乙券的人佔 $30%$ 時會形成穩定狀態。</p>
 <p>$\cdot$ 點評：這題是課本例題，詳看下圖 ( 取自全華課本第四冊 p156.) 。<br><img src="/2017/07/02/106大學指考數乙/11fig.png" alt="11fig.png" title=""></p>
 <img src="/2017/07/02/106大學指考數乙/12.png" alt="12.png" title="">
 <p>(1)<br>假設藍色代幣有 $x$ 枚，則總共有 $13+x$ 枚代幣，根據題目給的條件，任挑一枚代幣可兌換金額的期望值是 $20$ 元，可列式：</p>
