@@ -115,7 +115,7 @@
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/11.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/11fig.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數乙/12.png">
-<meta property="og:updated_time" content="2017-07-04T11:30:55.000Z">
+<meta property="og:updated_time" content="2017-07-04T16:35:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="106大學指考數乙">
 <meta name="twitter:description" content="又到了一年一度的指考啦，筆者其實每年都會在第一時間放下手邊的是趕快來解一波，這份考題算相當平易近人，我中午一邊吃飯一邊看，大概花了30分鐘左右，但有一題要稍微麻煩一點我沒算。我會在詳解中寫的儘量詳細，但因為對 hexo 還不夠熟悉，如果有打錯一定要跟我說～～ 那我們開始吧！">
@@ -410,7 +410,7 @@
 <p>易知， $a_n = (\frac{1}{2})^n$ ，此題在問數列的收斂性，也就是在問各個選項的數列 {$b_k$} 其極限 </p>
 <script type="math/tex; mode=display">\lim_{n \to \infty} b_n</script><p>是否為 $0$.<br>(1) $ b_k=-a_k $ 則 </p>
 <script type="math/tex; mode=display">\lim_{n\to\infty}-(\frac{1}{2})^n=0</script><p>(2) $b_k=a_k^2$ 則 </p>
-<script type="math/tex; mode=display">\lim_{n\to\infty}(\frac{1}{2})^2n=0</script><p>(3) $b_k=\sqrt{a_k}$ 則 </p>
+<script type="math/tex; mode=display">\lim_{n\to\infty}((\frac{1}{2})^n)^2=0</script><p>(3) $b_k=\sqrt{a_k}$ 則 </p>
 <script type="math/tex; mode=display">\lim_{n\to\infty}(\frac{1}{2})^{n/2}=0</script><p>(4) $b_k=\frac{1}{a_k}$ 則 </p>
 <script type="math/tex; mode=display">\lim_{n\to\infty}2^n \to \infty</script><p>(5) $b_k=\log a_k$ 則 </p>
 <script type="math/tex; mode=display">\lim_{n\to\infty} ( \log \frac{1}{2^n} ) = \lim_{n\to\infty}(-n\log2) \to -\infty</script><p>故選 (1)(2)(3).</p>
@@ -479,7 +479,7 @@ c & d
 \begin{bmatrix} 
 起始的甲比率\\
 起始的乙比率
-\end{bmatrix}</script><p>這樣的寫法跟線性變化有 $87%$ 像，好啦沒錯，事實上轉移矩陣就是一種線性變換。<br>根據矩陣的乘法結構，可以知道變化過一次的甲的比率 ( 也就是後來的甲 ) 來自於兩個傢伙，分別來自 $ 起始的甲\cdot a $ 與 $ 起始的乙\cdot b $ ，言下之意， $a$ 就是原本是甲後來還很忠誠地留在甲的比率，而 $b$ 就是原本是乙可是後來叛逃到甲的比率，再根據轉移矩陣的特性，每一直行的總和是 $1$ ，於是寫這矩陣就跟喝水一樣輕鬆惹。</p>
+\end{bmatrix}</script><p>這樣的寫法跟線性變化有 $87\%$ 像，好啦沒錯，事實上轉移矩陣就是一種線性變換。<br>根據矩陣的乘法結構，可以知道變化過一次的甲的比率 ( 也就是後來的甲 ) 來自於兩個傢伙，分別來自 $ 起始的甲\cdot a $ 與 $ 起始的乙\cdot b $ ，言下之意， $a$ 就是原本是甲後來還很忠誠地留在甲的比率，而 $b$ 就是原本是乙可是後來叛逃到甲的比率，再根據轉移矩陣的特性，每一直行的總和是 $1$ ，於是寫這矩陣就跟喝水一樣輕鬆惹。</p>
 <p>(2)<br>所謂穩定，意思是在被轉移一次之後卻毫無改變，那麼假設這個穩定的比率分別是 $x,y$ 則寫成數學式就是</p>
 <script type="math/tex; mode=display">
 \begin{bmatrix} 
@@ -494,11 +494,11 @@ y
 \begin{bmatrix} 
 x\\
 y
-\end{bmatrix}</script><p>再配上比率總和是 $1$ ，也就是 $x+y=1$ ，可解得 $x=0.7,y=0.3$ 。<br>也就是領取甲券的人佔 $70%$ 、領取乙券的人佔 $30%$ 時會形成穩定狀態。</p>
+\end{bmatrix}</script><p>再配上比率總和是 $1$ ，也就是 $x+y=1$ ，可解得 $x=0.7,y=0.3$ 。<br>也就是領取甲券的人佔 $70\%$ 、領取乙券的人佔 $30\%$ 時會形成穩定狀態。</p>
 <p>$\cdot$ 點評：這題是課本例題，詳看下圖 ( 取自全華課本第四冊 p156.) 。<br><img src="/2017/07/02/106大學指考數乙/11fig.png" alt="11fig.png" title=""></p>
 <img src="/2017/07/02/106大學指考數乙/12.png" alt="12.png" title="">
-<p>(1)<br>假設藍色代幣有 $x$ 枚，則總共有 $13+x$ 枚代幣，根據題目給的條件，任挑一枚代幣可兌換金額的期望值是 $20$ 元，可列式：</p>
-<script type="math/tex; mode=display">50\cdot \frac{4}{13+x} +20\cdot \frac{9}{13+x} +10\cdot \frac{x}{13+x} =20</script><p>可解得 $x=12$ 。<br>(2)<br>$P(Y\leq 50)$ 的白話文就是：幫算一次取兩枚的錢錢加起來不超過 $50$ 元的機率。所以你只可能取到 $20+20$, $20+10$, $10+10$ ，也就是綠綠、綠藍、藍藍共三種組合，注意到，因為是一次取兩枚，所以並沒有順序性。所以所求機率為</p>
+<p>(1)<br>假設藍色代幣有 $n$ 枚，則總共有 $13+n$ 枚代幣，根據題目給的條件，任挑一枚代幣可兌換金額的期望值是 $20$ 元，可列式：</p>
+<script type="math/tex; mode=display">50\cdot \frac{4}{13+n} +20\cdot \frac{9}{13+n} +10\cdot \frac{n}{13+n} =20</script><p>可解得 $n=12$ 。<br>(2)<br>$P(Y\leq 50)$ 的白話文就是：幫算一次取兩枚的錢錢加起來不超過 $50$ 元的機率。所以你只可能取到 $20+20$, $20+10$, $10+10$ ，也就是綠綠、綠藍、藍藍共三種組合，注意到，因為是一次取兩枚，所以並沒有順序性；而分母部分則是總共有 $9+12+n=25$ ，從中隨意挑兩枚。所以所求機率為</p>
 <script type="math/tex; mode=display">P(Y\leq 50) = \frac{ C^9_2 +C^9_1C^{12}_1+C^{12}_2 }{C^{25}_2} = \frac{7}{10}</script><p>$\cdot$ 點評： 98 學測有幾乎一模一樣的考題 。</p>
 <blockquote>
 <p>抽獎遊戲中，參加者自箱中抽出一球，確定顏色後放回。只有抽得藍色或紅色球者可得消費券，其金額分別為 ( 抽得藍色球者 )$2000$ 元、 (抽得紅色球者)$1000$ 元。箱中已置有 $2$ 顆藍色球及 $5$ 顆紅色球。在抽出任一球之機率相等的條件下，主辦單位希望參加者所得的消費券金額的期望值為 $300$ 元，則主辦單位應於箱內再置入【　　　　】顆其他顏色的球。—98學測</p>
