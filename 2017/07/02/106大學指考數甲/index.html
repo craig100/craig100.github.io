@@ -109,6 +109,7 @@
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數甲/5fig.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數甲/6.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數甲/7.png">
+<meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數甲/7fig.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數甲/8.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數甲/9.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數甲/9fig.png">
@@ -118,7 +119,7 @@
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數甲/12fig.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數甲/13.png">
 <meta property="og:image" content="http://craig100.github.io/2017/07/02/106大學指考數甲/13fig.png">
-<meta property="og:updated_time" content="2017-07-05T06:15:16.000Z">
+<meta property="og:updated_time" content="2017-07-06T03:22:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="106大學指考數甲">
 <meta name="twitter:description" content="數甲篇來啦，不過因為我設定會考數甲的人，一般來說對數學是比較熟悉的，所以說明可能不會跟前一篇一樣鉅細靡遺，但我還是會儘可能的講清楚啦。">
@@ -407,7 +408,7 @@
 <p>$\cdot$ 點評：向量垂不垂直、角度夾銳不銳頓不頓算是老題目了，幾乎年年考，而畫圖真的是萬用解。</p>
 <img src="/2017/07/02/106大學指考數甲/6.png" alt="6.png" title="">
 <p>首先我們做一點觀察<br>1.什麼是 $z^n$ ？<br>$z^n$ 這傢伙一方面滿足方程式 $x+\frac{1}{x}+2=0$, 令一方面用極式表達是 $r^n(\cos n\theta +i\sin n\theta)$<br>於是利用 $z^n$ 滿足 $x^2+1+2x=0$ ，可解得 <script type="math/tex">x = z^n = \frac{-2\pm\sqrt{2^2-4}}{2} =-1</script><br>這告訴我們 $z^n=-1$. 當然這也保證 $z$ 寫成複數的極式時， $r$ 必須是 $1$。<br>2.什麼是 $z^n+z^{-n}$ ？<br>因為 $z=r(\cos \theta+i\sin \theta)= \cos \theta+i\sin \theta$<br>所以</p>
-<script type="math/tex; mode=display">z^n+z^{-n} = \cos n\theta+i\sin n\theta +\cos n\theta - i\sin n\theta =2\cos n\theta</script><p>(1)對的<br>(2)高中版本的棣美弗定理對任意 $n$ 是正整數皆成立。錯<br>(3)代數基本定理告訴我們， $n$ 次複係數多項式，必存在 $1$ 個複數根，當然往下推理下去，可以得到有 $n$ 個複數跟，但注意到，有可能有重根。<br>在這選項而言，你觀察發現 $z^{2n}+2z^n+1=0$ 對 $z$ 而言有 $2n$ 個跟好像蠻合理的，但小心，這裡有一個明顯的重根 $(z^n+1)^2=0$ ，所以這裡錯在題目說有 $2n$ 個『不同』的 $z$ 。<br>(4)(5)由前面的觀察知</p>
+<script type="math/tex; mode=display">z^n+z^{-n} = \cos n\theta+i\sin n\theta +\cos n\theta - i\sin n\theta =2\cos n\theta</script><p>(1)對的<br>(2)高中版本的棣美弗定理對任意 $n$ 是正整數皆成立。錯<br>(3)代數基本定理告訴我們， $n$ 次複係數多項式，必存在 $1$ 個複數根，當然往下推理下去，可以得到有 $n$ 個複數根，但注意到，有可能有重根。<br>在這選項而言，你觀察發現 $z^{2n}+2z^n+1=0$ 對 $z$ 而言有 $2n$ 個根好像蠻合理的，但小心，這裡有一個明顯的重根 $(z^n+1)^2=0$ ，所以這裡錯在題目說有 $2n$ 個『不同』的 $z$ 。<br>(4)(5)由前面的觀察知</p>
 <script type="math/tex; mode=display">-2 = 2\cos n\theta</script><p>或</p>
 <script type="math/tex; mode=display">\cos n\theta = -1</script><p>也就是 </p>
 <script type="math/tex; mode=display">n\theta = \pi +2\pi k,k\in\mathbb{Z}</script><p>或</p>
@@ -416,10 +417,11 @@
 <img src="/2017/07/02/106大學指考數甲/7.png" alt="7.png" title="">
 <p>堪稱整張考卷最困難的問題。尤其是第 (3)(4) 小題<br>首先因為 $f(x)$ 跟 $g(x)$ 只有一交點，而且是相切在 $x=1$ 處，注意到，相切至少要二重根，所以可以寫成</p>
 <script type="math/tex; mode=display">f(x)-g(x)=a(x-1)^2(x-k), a>0,a \in \mathbb R ,k\in \mathbb C</script><p>但因為實係數多項方程式有虛根成對定理，所以 $k$ 一定是實數，但若 $k$ 是實數，則 $k$ 一定要是 $1$ ，否則 $f(x)$ 和 $g(x)$ 就會不只一交點，故 $f(x)-g(x) = a(x-1)^3$ 其中 $a&gt;0$ ，這結果超不顯然。</p>
-<p>(1)(2)<br>由 $f(x)$ 和 $g(x)$ 在 $x=1$ 處相切知：<br>$f(1)=g(1)$, $f’(1)=g’(1)$。<br>注意到，因為 $g(x)$ 是型如 $mx+k$ 的線型函數，所以微分後是一常數，恰為斜率。<br>(3)<br>因為前面的觀察 $f(x)-g(x)=a(x-1)^3$ ，我們把它拿起來微分<br>得到：<br>$f’(x)-g’(x)=3a(x-1)^2$, $f’’(x)-g’’(x)=6a(x-1)$<br>但注意到 $g(x)$ 本身是線型函數，二次微分根本就是 $0$ 所以可知 $f’’(1)=0$<br>(4)<br>同樣的，因為</p>
-<script type="math/tex; mode=display">f'(x)-g'(x)=3a(x-1)^2</script><p>所以 (4) 錯<br>(5)<br>因為 $g(x)$ 是線型函數，所以 $g’’(x)$ 根本就是 $0$ ，而 $f(x)$ 是一個三次函數，至多只有一個反曲點，故錯誤。</p>
+<p>(1)(2)<br>由 $f(x)$ 和 $g(x)$ 在 $x=1$ 處相切知：<br>$f(1)=g(1)$, $f’(1)=g’(1)$。<br>注意到，因為 $g(x)$ 是型如 $mx+k$ 的線型函數，所以微分後是一常數，恰為斜率。<br>(3)<br>因為前面的觀察 $f(x)-g(x)=a(x-1)^3$ ，我們把它拿起來微分<br>得到：<br>$f’(x)-g’(x)=3a(x-1)^2$, $f’’(x)-g’’(x)=6a(x-1)$<br>但注意到 $g(x)$ 本身是線型函數，二次微分根本就是 $0$ 所以可知 $g’’(1)=0$ ，所以 $f’’(1)=0$<br>(4)<br>同樣的，因為</p>
+<script type="math/tex; mode=display">f'(x)-g'(x)=3a(x-1)^2</script><p>所以 (4) 錯<br>(5)<br>一樣因為 $g(x)$ 是線型函數，所以 $g’’(x)$ 是 $0$ ，而 $f(x)$ 是一個三次函數，至多只有一個反曲點，故錯誤。</p>
 <p>故選(1)(2)(3).</p>
 <p>$\cdot$ 點評：難度非常高的問題，但容易猜對，因為如果學生『直觀』的以為這個三次函數是嚴格遞增，無極值的那種，反而會全對，出題手法或選項可以再考慮一下，很可惜的題目。</p>
+<p>事實上， $f(x)$ 與 $g(x)$ 圖形有兩個可能，其一就是 $f(x)$ 嚴格遞增，例如 $f(x)=(x-1)^3$, $g(x)=0$,<br>而第二種可能長這樣：<br>考慮 $f(x)=x^3-3x^2+2x$, $g(x)=1-x$<br><img src="/2017/07/02/106大學指考數甲/7fig.png" alt="7fig.png" title=""></p>
 <img src="/2017/07/02/106大學指考數甲/8.png" alt="8.png" title="">
 <p>孝班第一場一定要贏 ( 機率為 $\frac{1}{5}$ ) 才有錢拿，才需要算期望值，若孝班第二場也贏，則是冠軍，所以所得獎金期望值為</p>
 <script type="math/tex; mode=display">6000 \cdot \frac{1}{5}\cdot \frac{1}{5} +4000 \cdot \frac{1}{5} \frac{4}{5} = 880</script><p>故空格應填 880.</p>
